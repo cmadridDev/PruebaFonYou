@@ -1,0 +1,630 @@
+{
+	"info": {
+		"_postman_id": "91471e52-dafc-45f3-a517-b1c762b2334f",
+		"name": "FonYou",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9581770"
+	},
+	"item": [
+		{
+			"name": "1. Estudiantes",
+			"item": [
+				{
+					"name": "1.1. Crear Zona Invalida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Julio\",\r\n    \"ciudad\": \"Quito\",\r\n    \"fechaNacimiento\": \"1990-01-01\",\r\n    \"zonaHoraria\": \"America/GYE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/estudiantes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"estudiantes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2. Crear Zona Invalida EN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Julio\",\r\n    \"ciudad\": \"Quito\",\r\n    \"fechaNacimiento\": \"1990-01-01\",\r\n    \"zonaHoraria\": \"America/GYE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/estudiantes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"estudiantes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.3. Crear Exitoso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Julio\",\r\n    \"ciudad\": \"Sydney\",\r\n    \"fechaNacimiento\": \"1990-01-01\",\r\n    \"zonaHoraria\": \"Australia/Sydney\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/estudiantes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"estudiantes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.4. Obtener Estudiante",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:8088/api/estudiantes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"estudiantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.5. Actualizar Estudiante",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Julio\",\r\n    \"ciudad\": \"Bogota\",\r\n    \"fechaNacimiento\": \"1992-01-01\",\r\n    \"zonaHoraria\": \"America/Bogota\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/estudiantes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"estudiantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.6. Eliminacion Id no existe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/estudiantes/111",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"estudiantes",
+								"111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.7. Eliminacion Correcta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/estudiantes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"estudiantes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2. Examenes",
+			"item": [
+				{
+					"name": "2.1. Creacion sin preguntas",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Exámen de Matematicas Avanzadas 1 - 2024 I\",\r\n    \"descripcion\": \"Exámen correspondiente al primer periodo del año lectivo 2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.2. Varios errores capturados",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Exámen de Matematicas Avanzadas 1 - 2024 I\",\r\n    \"descripcion\": \"Exámen correspondiente al primer periodo del año lectivo 2024\",\r\n    \"preguntas\": [\r\n        {\r\n            \"descripcion\": \"Cuanto es 3 al cubo\",\r\n            \"puntaje\": 20,\r\n            \"opciones\": [\r\n                {\r\n                    \"descripcion\": \"9\",\r\n                    \"correcta\": true\r\n                },\r\n                {\r\n                    \"descripcion\": \"27\",\r\n                    \"correcta\": true\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.3. Varios errores capturados EN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Exámen de Matematicas Avanzadas 1 - 2024 I\",\r\n    \"descripcion\": \"Exámen correspondiente al primer periodo del año lectivo 2024\",\r\n    \"preguntas\": [\r\n        {\r\n            \"descripcion\": \"Cuanto es 3 al cubo\",\r\n            \"puntaje\": 20,\r\n            \"opciones\": [\r\n                {\r\n                    \"descripcion\": \"9\",\r\n                    \"correcta\": true\r\n                },\r\n                {\r\n                    \"descripcion\": \"27\",\r\n                    \"correcta\": true\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.4. Creacion exitosa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Exámen de Matematicas Avanzadas 1 - 2024 I\",\r\n    \"descripcion\": \"Exámen correspondiente al primer periodo del año lectivo 2024\",\r\n    \"preguntas\": [\r\n        {\r\n            \"descripcion\": \"Cuanto es 3 al cubo?\",\r\n            \"puntaje\": 20,\r\n            \"opciones\": [\r\n                {\r\n                    \"descripcion\": \"9\"\r\n                },\r\n                {\r\n                    \"descripcion\": \"27\",\r\n                    \"correcta\": true\r\n                },\r\n                {\r\n                    \"descripcion\": \"81\"\r\n                },\r\n                {\r\n                    \"descripcion\": \"6\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"descripcion\": \"Cuanto es 2+2?\",\r\n            \"puntaje\": 50,\r\n            \"opciones\": [\r\n                {\r\n                    \"descripcion\": \"9\"\r\n                },\r\n                {\r\n                    \"descripcion\": \"4\",\r\n                    \"correcta\": true\r\n                },\r\n                {\r\n                    \"descripcion\": \"10\"\r\n                },\r\n                {\r\n                    \"descripcion\": \"6\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"descripcion\": \"Cuanto es 3!?\",\r\n            \"puntaje\": 30,\r\n            \"opciones\": [\r\n                {\r\n                    \"descripcion\": \"9\"\r\n                },\r\n                {\r\n                    \"descripcion\": \"6\",\r\n                    \"correcta\": true\r\n                },\r\n                {\r\n                    \"descripcion\": \"81\"\r\n                },\r\n                {\r\n                    \"descripcion\": \"21\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3. ExamenEstudiante",
+			"item": [
+				{
+					"name": "3.1. Sin estudiantes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaExamen\": \"2024-05-25T12:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/estudiantes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"estudiantes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.2. Sin estudiantes EN",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "en",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fechaExamen\": \"2024-05-25T12:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/estudiantes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"estudiantes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3.3. Asignacion Correcta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idsEstudiantes\": [1,2,3,4,5],\r\n    \"fechaExamen\": \"2024-05-25T12:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/estudiantes/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"estudiantes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4. RespuestaExamen",
+			"item": [
+				{
+					"name": "4.1. Examen no Asignado a Estudiante",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"4\": 1,\r\n    \"5\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/respuesta/1/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"respuesta",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.2. Opciones no Relacionadas a Preguntas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"4\": 1,\r\n    \"5\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/respuesta/2/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"respuesta",
+								"2",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.3. Envio Sin responder todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"4\": 13,\r\n    \"5\": 18\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/respuesta/2/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"respuesta",
+								"2",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.4. Contestando todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"4\": 13,\r\n    \"5\": 17,\r\n    \"6\": 22,\r\n    \"7\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/respuesta/2/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"respuesta",
+								"2",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.5. Todo Correcto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"4\": 13,\r\n    \"5\": 17,\r\n    \"6\": 22,\r\n    \"7\": 25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/respuesta/2/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"respuesta",
+								"2",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.6. Todo incorrecto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"4\": 14,\r\n    \"5\": 18,\r\n    \"6\": 23,\r\n    \"7\": 26\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/examenes/respuesta/2/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"examenes",
+								"respuesta",
+								"2",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
