@@ -569,7 +569,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"4\": 13,\r\n    \"5\": 17,\r\n    \"6\": 22,\r\n    \"7\": 25\r\n}",
+							"raw": "{\r\n    \"4\": 13,\r\n    \"5\": 17,\r\n    \"6\": 21,\r\n    \"7\": 25\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -577,7 +577,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8088/api/examenes/respuesta/2/3",
+							"raw": "localhost:8088/api/examenes/respuesta/2/4",
 							"host": [
 								"localhost"
 							],
@@ -587,7 +587,7 @@
 								"examenes",
 								"respuesta",
 								"2",
-								"3"
+								"4"
 							]
 						}
 					},
