@@ -72,7 +72,7 @@ class EstudianteControllerTest {
         mockMvc.perform(post("/api/estudiantes/")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(estudianteDtoJson))
-                .andExpect(status().isOk())
+                .andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.value.id").value(1))
                 .andExpect(jsonPath("$.value.nombre").value("César"))
